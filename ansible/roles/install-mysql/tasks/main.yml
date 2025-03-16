@@ -1,0 +1,6 @@
+- name: Install MySQL
+  ansible.builtin.dnf:
+    name: mysql
+    state: latest
+  tags:
+    - install-mysql

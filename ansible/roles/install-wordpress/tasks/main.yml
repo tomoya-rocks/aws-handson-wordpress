@@ -1,0 +1,24 @@
+- name: Download wordpress archive
+  get_url:
+    url: http://ja.wordpress.org/latest-ja.tar.gz
+    dest: /tmp
+  tags:
+    - install-wordpress
+
+- name: Unarchive wordpress
+  unarchive:
+    src: /tmp/wordpress-6.7.2-ja.tar.gz
+    dest: /tmp/
+    remote_src: true
+  tags:
+    - install-wordpress
+
+- name: Copy wordpress to DocumentRoot
+  copy:
+    src: /tmp/wordpress/
+    dest: /var/www/html/
+    remote_src: true
+    owner: apache
+    group: apache
+  tags:
+    - install-wordpress

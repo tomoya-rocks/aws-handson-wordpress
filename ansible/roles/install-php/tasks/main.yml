@@ -1,0 +1,11 @@
+- name: Install php
+  ansible.builtin.dnf:
+    name:
+      - php
+      - php-devel
+      - php-mbstring
+      - php-mysqlnd
+      - php-xml
+    state: latest
+  tags:
+    - install-php

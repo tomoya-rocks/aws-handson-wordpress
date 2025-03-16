@@ -1,0 +1,6 @@
+[server]
+192.168.56.100
+
+[server:vars]
+ansible_ssh_private_key_file=/Users/tomoya/git/aws-handson-wordpress/.vagrant/machines/default/virtualbox/private_key
+ansible_python_interpreter=/usr/bin/python3
