@@ -2,3 +2,6 @@
 .vscode
 Vagrantfile
 **/venv
+**/.terraform/*
+*.tfstate
+*.tfstate.*
